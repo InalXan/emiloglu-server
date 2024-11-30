@@ -130,4 +130,19 @@ sponsors_router.delete("/delete/sponsor/:id", async (req, res) => {
   }
 });
 
+sponsors_router.get("/fetch/sponsors", async (req, res) => {
+  try {
+    const sponsors = await Sponsors.find() // Kategori adını da çekmek için populate kullanıyoruz
+    if (sponsors.length === 0) {
+      return res.status(404).json({ message: "No sponsors found." });
+    }
+    res.status(200).json(sponsors); // Sponsorları JSON olarak döndürüyoruz
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error." });
+  }
+});
+
+
 export default sponsors_router;
+

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 // MongoDB bağlantı URL'si
-const DB_LINK = 'mongodb+srv://admin:3y3vaye1@emiloglu.s8xyxux.mongodb.net/?retryWrites=true&w=majority&appName=emiloglu';
+const DB_LINK = 'mongodb+srv://Tunar:cKzYb2c0nQi3ajnH@cluster0.dxaqzlk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 const conn = async () => {
     try {
